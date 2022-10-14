@@ -10,8 +10,21 @@ function getComputerChoice(){
     }
 }
 
+
+function getPlayerChoice(){
+    let choice = prompt("Choose Rock, Paper or Scissors");
+    choice = choice.toLowerCase();
+    if(choice == "rock" || "paper" || "scissors"){
+        return choice;
+    } else {
+        console.log("please choose a proper play, try again");
+        getPlayerChoice();
+    }
+}   
+
+
 function playRound(playerSelection, computerSelection){
-    if(playerSelection == "Rock"){
+    if(playerSelection == "rock"){
 
         if(computerSelection == "Rock"){
             return "It's a tie"
@@ -21,7 +34,7 @@ function playRound(playerSelection, computerSelection){
             return "Rock beats Scissors, Congrats you win"
         }
 
-    } else if(playerSelection == "Paper"){
+    } else if(playerSelection == "paper"){
 
         if(computerSelection == "Rock"){
             return "Paper beats Rock, Congrats you win"
@@ -31,7 +44,7 @@ function playRound(playerSelection, computerSelection){
             return "Scissors beats Paper, Sorry you lose"
         }
 
-    }else if(playerSelection == "Scissors"){
+    }else if(playerSelection == "scissors"){
 
         if(computerSelection == "Rock"){
             return "Rock beats Scissors, Sorry you lose"
@@ -46,3 +59,8 @@ function playRound(playerSelection, computerSelection){
         return "Please enter a valid play"
     }
 }
+
+const playerSelection = getPlayerChoice();
+const computerSelection = getComputerChoice();
+
+console.log(playRound(playerSelection, computerSelection));
