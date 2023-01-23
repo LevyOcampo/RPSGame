@@ -5,14 +5,19 @@ var computerScore = 0;
 const scoreBoard = document.querySelector('#scoreBoard');
 
 const playerSc = document.createElement('p');
+playerSc.classList.add('scoreBoard');
+playerSc.style.color ="blue";
 playerSc.textContent = "Your Score: "+playerScore;
 scoreBoard.appendChild(playerSc);
 
 const compSc = document.createElement('p');
+compSc.classList.add('scoreBoard');
+compSc.style.color = "red";
 compSc.textContent = "Computer Score: "+computerScore;
 scoreBoard.appendChild(compSc);
 
 const gameEvent = document.createElement('p');
+gameEvent.classList.add('scoreBoard');
 gameEvent.textContent="Lets get started";
 scoreBoard.appendChild(gameEvent);
 
