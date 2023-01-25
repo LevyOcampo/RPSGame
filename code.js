@@ -1,25 +1,26 @@
 var playerScore = 0;
 var computerScore = 0;
 
-
-const scoreBoard = document.querySelector('#scoreBoard');
+const playScore = document.querySelector('#playScore')
+const comScore = document.querySelector('#comScore')
+const gameText = document.querySelector('#gameText')
 
 const playerSc = document.createElement('p');
-playerSc.classList.add('scoreBoard');
+playerSc.classList.add('playScore');
 playerSc.style.color ="blue";
 playerSc.textContent = "Your Score: "+playerScore;
-scoreBoard.appendChild(playerSc);
+playScore.appendChild(playerSc);
 
 const compSc = document.createElement('p');
-compSc.classList.add('scoreBoard');
+compSc.classList.add('comScore');
 compSc.style.color = "red";
 compSc.textContent = "Computer Score: "+computerScore;
-scoreBoard.appendChild(compSc);
+comScore.appendChild(compSc);
 
 const gameEvent = document.createElement('p');
-gameEvent.classList.add('scoreBoard');
-gameEvent.textContent="Lets get started";
-scoreBoard.appendChild(gameEvent);
+gameEvent.classList.add('gameText');
+gameEvent.textContent="Lets get started. You make the first move!";
+gameText.appendChild(gameEvent);
 
 
 function getComputerChoice(){
@@ -96,13 +97,13 @@ function finalVerdict(){
 
 function display(result){
     playerSc.textContent = "Your Score: "+playerScore;
-    scoreBoard.appendChild(playerSc);
+    playScore.appendChild(playerSc);
 
     compSc.textContent = "Computer Score: "+computerScore;
-    scoreBoard.appendChild(compSc); 
+    comScore.appendChild(compSc); 
 
     gameEvent.textContent=result;
-    scoreBoard.appendChild(gameEvent);
+    gameText.appendChild(gameEvent);
     
 }
 

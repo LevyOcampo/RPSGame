@@ -1,15 +1,19 @@
 body {
     background-color: rgb(85, 83, 83);
-}
-.game {
     display: flex;
-    flex: 1;
-    min-height: 100vh;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
 }
-.buttons {
+
+#scoreBoard{
     display: flex;
+    flex-direction: row;
+}
+
+.buttons {
+    display: block;
     flex: 1;
     align-items: center;
     justify-content: center;
@@ -26,11 +30,4 @@ body {
     color: white;
     background: rgba(0,0,0,0.4);
     text-shadow: 0 0 .5rem black;
-}
-
-.scoreBoard {
-    display: block;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
 }
