@@ -107,6 +107,20 @@ function display(result){
     
 }
 
+function reset(){
+    playerScore = 0;
+    computerScore = 0;
+
+    playerSc.textContent = "Your Score: "+playerScore;
+    playScore.appendChild(playerSc);
+
+    compSc.textContent = "Computer Score: "+computerScore;
+    comScore.appendChild(compSc); 
+
+    gameEvent.textContent= "Lets try again. You make the first move!";
+    gameText.appendChild(gameEvent);
+}
+
 document.getElementById("Rock").addEventListener("click", function(){
         playRound("rock",getComputerChoice());
 });
@@ -117,4 +131,7 @@ document.getElementById("Paper").addEventListener("click", function(){
 
 document.getElementById("Scissors").addEventListener("click", function(){
         playRound("scissors",getComputerChoice());
+});
+document.getElementById("resetButton").addEventListener("click", function(){
+        reset();
 });
