@@ -7,13 +7,11 @@ const gameText = document.querySelector('#gameText')
 
 const playerSc = document.createElement('p');
 playerSc.classList.add('playScore');
-playerSc.style.color ="blue";
 playerSc.textContent = "Your Score: "+playerScore;
 playScore.appendChild(playerSc);
 
 const compSc = document.createElement('p');
 compSc.classList.add('comScore');
-compSc.style.color = "red";
 compSc.textContent = "Computer Score: "+computerScore;
 comScore.appendChild(compSc);
 
